@@ -3,7 +3,7 @@ A powershell port of the ZSH utility Warp Directory (wd)
 
 # Installation
 - Create a folder in your PowerShell modules directory named `warp-directory`.  Drop this in.
-- Execute `Import-Module warp-directory`
+- Execute `Import-Module warp-directory` or add it to your `$PROFILE`.
 
 # Supported Commands
 ```
