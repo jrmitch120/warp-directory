@@ -68,7 +68,15 @@ function Get-Warps {
         Write-Host "No warp points found." -ForegroundColor Yellow
         return
     }
-    $warpPoints.GetEnumerator() | ForEach-Object { Write-Host "$($_.Key) -> $($_.Value)" }
+
+    $maxLength = ($warpPoints.Keys | Measure-Object -Property Length -Maximum).Maximum
+
+    $warpPoints.GetEnumerator() | Sort-Object Name | ForEach-Object {
+        $name = $_.Key.PadRight($maxLength)
+        Write-Host -NoNewline ($name)
+        Write-Host -NoNewline " -> " -ForegroundColor DarkGray
+        Write-Host $_.Value 
+    }
 }
 
 function Get-WarpPath {
