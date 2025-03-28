@@ -182,7 +182,7 @@ function wd {
         "path" { if ($Arg1) { Get-WarpPath -Name $Arg1 } else { Write-Host "Error: Missing warp name." -ForegroundColor Red } }
         "show" { Get-WarpsForCurrentDir }
         "clean" { if ($Arg1 -eq "--force") { Clear-Warps -Force } else { Clear-Warps } }
-        "--version" { Write-Host "Warp Directory CLI v1.0" }
+        "--version" { Write-Host "Warp Directory CLI v1.1" }
         default { 
             if (-Not $Command) { Show-Help }
             elseif ($warpPoints.ContainsKey($Command)) { Set-Warp -Name $Command }
