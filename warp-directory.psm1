@@ -191,4 +191,5 @@ function wd {
     }
 }
 
-Export-ModuleMember -Function New-Warp, Remove-Warp, Get-Warps, Get-WarpFiles, Get-WarpPath, Get-WarpsForCurrentDir, Clear-Warps, Set-Warp, Show-Help, wd
+Export-ModuleMember -Function wd
+
